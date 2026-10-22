@@ -12,7 +12,8 @@ enum class AppLanguage(val tag: String, val ownName: String) {
     SYSTEM("", ""),
     ENGLISH("en", "English"),
     RUSSIAN("ru", "Русский"),
-    CHINESE("zh", "中文");
+    CHINESE("zh", "中文"),
+    JAPANESE("ja", "日本語");
 
     /** Makes this the app's language; the screens on show are built again in it. */
     fun apply() {

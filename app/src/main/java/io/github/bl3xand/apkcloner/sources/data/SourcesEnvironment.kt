@@ -42,11 +42,12 @@ object SourcesEnvironment {
         Tr.pluralResolver = { key, count, args -> plural(key, count, args) }
     }
 
-    /** The texts ship as the reference's JSON catalogues: English, Russian and Chinese. */
+    /** The texts ship as the reference's JSON catalogues: English, Russian, Chinese and Japanese. */
     private fun loadTexts(context: Context) {
         val language = when (context.resources.configuration.locales[0].language) {
             "ru" -> "ru"
             "zh" -> "zh"
+            "ja" -> "ja"
             else -> "en"
         }
         if (language == loadedLanguage) return
